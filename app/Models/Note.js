@@ -28,7 +28,7 @@ export class Note {
         <div>
         <h3 style="color: ${this.color}">${this.name}</h3>
         <button onclick="app.notesController.saveNote()" class="btn btn-primary">save</button>
-        <p>Created: ${this.ComputeDate} | Updated${this.CompDate}</p>
+        <p>Created: ${this.ComputeDate} | Updated: ${this.CompDate}</p>
         <textarea name="notes" id="NContent" cols="100" rows="20">${this.content}</textarea>
         </div>`
     }
@@ -45,11 +45,11 @@ export class Note {
 
     get ComputeDate() {
         let date = this.date
-        return (date.getMonth() + 1) + '/' + (date.getDate()) + '/' + (date.getFullYear()) + 'min' + (date.getSeconds())
+        return (date.getMonth() + 1) + '/' + (date.getDate()) + '/' + (date.getFullYear()) + ' seconds: ' + (date.getSeconds())
     }
 
     get CompDate() {
         let date = this.upDate
-        return (date.getMonth() + 1) + '/' + (date.getDate()) + '/' + (date.getFullYear()) + 'sec' + (date.getSeconds())
+        return (date.getMonth() + 1) + '/' + (date.getDate()) + '/' + (date.getFullYear()) + ' seconds: ' + (date.getSeconds())
     }
 }
