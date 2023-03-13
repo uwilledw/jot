@@ -34,7 +34,7 @@
         <div class="my-4">
           <h4>New Note</h4>
           <form class="d-flex justify-content-around" onsubmit="app.notesController.addNote()">
-            <input type="text" minlength="3" maxlength="15" class="form-control" name="name" id="name"
+            <input type="text" required minlength="3" maxlength="15" class="form-control" name="name" id="name"
               placeholder="Title">
             <input type="color" class="form-control form-control-color" id="color" name="color">
             <button class="btn btn-primary" type="submit" title="new note"><i class="mdi mdi-plus"></i></button>
